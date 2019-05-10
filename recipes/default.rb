@@ -17,7 +17,7 @@ remote_file '/opt/tomcat8-8.5.40.tar.gz' do
   group 'root'
   action :create
   not_if { File.exist?('/opt/tomcat8-8.5.40.tar.gz') }
-  notifies :run, 'execute[extract_tar]', :immediately
+# notifies :run, 'execute[extract_tar]', :immediately
 end
 
 directory '/opt/tomcat' do
@@ -62,4 +62,11 @@ cookbook_file '/opt/tomcat/webapps/manager/META-INF/context.xml' do
   group 'root'
   mode '0600'
   action :create
+end
+
+cookbook_file '/opt/tomcat/webapps/SampleApp.war' do
+  source 'SampleApp.war'
+  action :create
+  owner 'root'
+  group 'root'
 end
