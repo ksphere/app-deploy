@@ -11,9 +11,12 @@ pipeline {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
       }
     }
-    stage('') {
+    stage('test') {
       steps {
-        pwd()
+        dir(path: '/root/chef-repo/') {
+          pwd()
+        }
+
       }
     }
   }
