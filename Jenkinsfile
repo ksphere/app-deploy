@@ -9,14 +9,7 @@ pipeline {
     stage('Lint Phase 2') {
       steps {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
-      }
-    }
-    stage('test') {
-      steps {
-        dir(path: '/root/chef-repo/') {
-          sh 'knife cookbook upload app-deploy'
-        }
-
+        build 'RunChef'
       }
     }
   }
