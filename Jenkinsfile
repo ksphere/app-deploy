@@ -13,10 +13,7 @@ pipeline {
     }
     stage('') {
       steps {
-        dir(path: '/root/chef-repo') {
-          pwd()
-        }
-
+        pwd()
       }
     }
   }
