@@ -63,5 +63,3 @@ cookbook_file '/opt/tomcat/webapps/manager/META-INF/context.xml' do
   mode '0600'
   action :create
 end
-
-
