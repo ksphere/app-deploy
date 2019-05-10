@@ -11,10 +11,5 @@ pipeline {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
       }
     }
-    stage('') {
-      steps {
-        pwd()
-      }
-    }
   }
 }
