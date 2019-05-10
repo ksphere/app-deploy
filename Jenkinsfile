@@ -13,10 +13,8 @@ pipeline {
     }
     stage('test') {
       steps {
-        dir(path: '/root/chef-repo/') {
-          pwd()
-        }
-
+        dir(path: '/root/chef-repo/')
+        sh 'knife node list'
       }
     }
   }
