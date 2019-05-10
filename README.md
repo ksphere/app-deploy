@@ -1,4 +1,4 @@
 # app-deploy
 
-TODO: Enter the cookbook description here.
+This cookbook will deploy .war application on tomcat8.
 
