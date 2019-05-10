@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Lint Phase 1') {
       steps {
@@ -9,6 +9,14 @@ pipeline {
     stage('Lint Phase 2') {
       steps {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
+      }
+    }
+    stage('') {
+      steps {
+        dir(path: '/root/chef-repo') {
+          pwd()
+        }
+
       }
     }
   }
