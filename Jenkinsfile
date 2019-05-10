@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('cookstyle_test') {
+    stage('Lint Phase 1') {
       steps {
         chef_cookbook_cookstyle(installation: '/usr/bin/cookstyle')
       }
