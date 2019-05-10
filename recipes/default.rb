@@ -16,7 +16,7 @@ remote_file '/opt/tomcat8-8.5.40.tar.gz' do
   owner 'root'
   group 'root'
   action :create
-  not_if {File.exist?('/opt/tomcat8-8.5.40.tar.gz')}
+  not_if { File.exist?('/opt/tomcat8-8.5.40.tar.gz') }
 end
 
 directory '/opt/tomcat' do
@@ -38,7 +38,7 @@ cookbook_file '/etc/systemd/system/tomcat.service' do
   action :create
 end
 
-execute "daemon-reload" do
+execute 'daemon-reload' do
   command 'systemctl daemon-reload'
 end
 
