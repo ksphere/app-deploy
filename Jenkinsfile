@@ -14,7 +14,7 @@ pipeline {
     stage('test') {
       steps {
         dir(path: '/root/chef-repo/') {
-          sh 'knife node list'
+          sh 'knife cookbook upload app-deploy'
         }
 
       }
