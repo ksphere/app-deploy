@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test with cookstyle') {
       steps {
-        ws(dir: '/opt/Koenig-org/chef-repo/cookbooks/example123/') {
+        ws(dir: '/opt/Koenig-org/chef-repo/cookbooks/example123') {
           chef_cookbook_cookstyle(installation: '/usr/bin/cookstyle')
         }
 
