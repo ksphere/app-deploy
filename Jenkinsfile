@@ -11,5 +11,10 @@ pipeline {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
       }
     }
+    stage('SmokeTest') {
+      steps {
+        chef_cookbook_unit(installation: '/opt/chef-workstation/embedded/bin/inspec')
+      }
+    }
   }
 }
