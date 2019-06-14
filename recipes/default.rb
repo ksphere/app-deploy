@@ -29,7 +29,7 @@ end
 
 execute 'extract_tar' do
   command 'tar -xvf /opt/tomcat8*.tar.gz -C /opt/tomcat --strip-components=1'
-  action :nothing
+#  action :nothing
 end
 
 cookbook_file '/etc/systemd/system/tomcat.service' do
