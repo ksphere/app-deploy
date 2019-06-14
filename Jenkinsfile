@@ -11,5 +11,13 @@ pipeline {
         chef_cookbook_foodcritic(installation: '/usr/local/bin/foodcritic')
       }
     }
+    stage('') {
+      steps {
+        dir(path: '/root/Koenig-org/chef-repo') {
+          sh 'knife ssh node1 "chef-client"'
+        }
+
+      }
+    }
   }
 }
