@@ -12,7 +12,7 @@ package 'java-1.8.0-openjdk-devel' do
 end
 
 remote_file '/opt/tomcat8-8.5.40.tar.gz' do
-  source 'http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz'
+  source 'https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz'
   owner 'root'
   group 'root'
   action :create
