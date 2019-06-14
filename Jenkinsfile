@@ -4,6 +4,7 @@ pipeline {
     stage('test with cookstyle') {
       steps {
         chef_cookbook_cookstyle(installation: '/usr/bin/cookstyle')
+        ws(dir: '/opt/Koenig-org/chef-repo/cookbooks/')
       }
     }
     stage('test with foodcritic') {
