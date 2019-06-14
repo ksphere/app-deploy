@@ -14,7 +14,7 @@ pipeline {
     stage('error') {
       steps {
         dir(path: '/opt/Koenig-org/chef-repo') {
-          sh 'knife ssh node1 --ssh-user root --ssh-password redhat  "chef-client"'
+          sh 'knife cookbook upload example123 && knife ssh node1 --ssh-user root --ssh-password redhat  "chef-client"'
         }
 
       }
